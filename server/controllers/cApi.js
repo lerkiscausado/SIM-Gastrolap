@@ -1,10 +1,10 @@
 const { json } = require("express");
 const mysql = require('mysql');
 const config = {
-    host: "cpanel6-co.conexcol.net",
+    host: "localhost",
     user: "adossofn_admin",
     password: "80082552700ers",
-    database:"adossofn_SIMDB"
+    database:"SIMDB"
     
     //SERVER CITOPAT
     /*host: "190.66.195.61",
