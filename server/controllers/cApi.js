@@ -1,16 +1,16 @@
 const { json } = require("express");
 const mysql = require('mysql');
 const config = {
-    host: "localhost",
+    /*host: "localhost",
     user: "adossofn_admin",
     password: "80082552700ers",
-    database:"SIMDB"
+    database:"SIMDB"*/
     
     //SERVER CITOPAT
-    /*host: "190.66.195.61",
+    host: "181.204.15.130",
     user: "adossofn_admin",
     password: "80082552700ers",
-    database:"simdb"*/
+    database:"simdb"
     
     //SERVER GASTROLAP
     /*host: "181.206.54.83",
