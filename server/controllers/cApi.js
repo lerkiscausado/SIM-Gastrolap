@@ -6,13 +6,13 @@ const config = {
     password: "80082552700ers",
     database:"SIMDB"*/
     
-    //SERVER CITOPAT
+    //SERVER GASTROLAP
     host: "181.204.15.130",
     user: "adossofn_admin",
     password: "80082552700ers",
     database:"simdb"
     
-    //SERVER GASTROLAP
+    //SERVER CITOPAT
     /*host: "181.206.54.83",
     user: "adossofn_admin",
     password: "80082552700ers",
@@ -153,7 +153,7 @@ module.exports.PacientesAtender = (req, res) => {
     +" JOIN licencias ON ((contratos.ID_LICENCIA = licencias.ID))) "
     +" JOIN cups ON ((detalle_orden.`CODIGO_CUPS` = cups.`CODIGO_CUPS`))) "
     +" JOIN especialistas ON ((ordenes.id_empleado=especialistas.id_especialista))) "
-    +" WHERE ((detalle_orden.id_tipo_estudio IN (10,11,12)) AND detalle_orden.estado='PENDIENTE') ", (error, result) => {
+    +" WHERE ((detalle_orden.id_tipo_estudio IN (10,11,12)) AND detalle_orden.estado='PENDIENTE' AND ordenes.fecha_ingreso=CURDATE()) ", (error, result) => {
         if (error) throw error;     
             //res.send(result).json(result);
             res.status(200).json(result);        
