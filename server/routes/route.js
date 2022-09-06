@@ -33,6 +33,7 @@ router.get("/especialistas", cApi.Especialistas);
 router.get("/agenda", cApi.FechaDisponible);
 router.get("/hora", cApi.HoraDisponible);
 router.post("/especimenes", cApi.Especimenes);
+router.post("/consentimiento", cApi.Consentimiento);
 router.get("/usuariosvb", cApi.UsuariosVB);
 
 // Rutas de Ejemplo Tabla

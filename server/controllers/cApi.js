@@ -39,6 +39,7 @@ module.exports.TipoIdentificacion = (req, res) => {
             //res.send(result).json(result);
             res.status(200).json(result);        
     });    
+    console.log(req.method);
 };
 module.exports.Persona = (req, res) => {    
     let tipoIdentificacion = req.query.tipoidentificacion;
@@ -101,19 +102,24 @@ module.exports.HoraDisponible = (req, res) => {
 };
 module.exports.Especimenes = (req, res) => {
     var data={                        
-            nombre: req.body.nombre,
-            estado: req.body.estado
-        }; 
+            id,
+            nombre,
+            estado
+        }=req.body; 
+    //let query="INSERT INTO especimenes SET id="+data.id+",nombre='"+data.nombre+"',estado='"+data.estado+"'";
     let query="INSERT INTO especimenes SET ?";
-    pool.query(query,data, function(error, result) {
+    pool.query(query, data,function(error, result) {
         if (error) {
             throw error;     
             //res.send(result).json(result);            
         }else{
             res.status(200).json(result);                    
         }
-    });    
-    console.log(data);
+    }); 
+    //res.status(200).json(data)  
+    //document.write(req.method);
+    console.log(req.body);
+
 };
 module.exports.ConsultarAgenda = (req, res) => {    
     //var id = req.query.id     
@@ -182,4 +188,26 @@ module.exports.UsuariosVB = (req, res) => {
             //res.send(result).json(result);
             res.status(200).json(result);        
     });    
+};
+module.exports.Consentimiento = (req, res) => {
+    var data={                        
+            id: req.body.id, 
+            id_Orden: req.body.idOrden,
+            anestesiologo: req.body.anestesiologo,
+            firma_Paciente: req.body.firmaPaciente,
+            nombre_Acudiente: req.body.nombreAcudiente,
+            identificacion_Acudiente: req.body.identificacionAcudiente,
+            firma_Acudiente: req.body.firmaAcudiente,            
+            estado: req.body.estado
+        }; 
+    let query="INSERT INTO consentimiento_informado SET ?";
+    pool.query(query,data, function(error, result) {
+        if (error) {
+            throw error;     
+            //res.send(result).json(result);            
+        }else{
+            res.status(200).json(result);                    
+        }
+    });    
+    console.log(data);
 };
