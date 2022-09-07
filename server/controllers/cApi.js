@@ -171,7 +171,7 @@ module.exports.ConsentimientoInformado = (req, res) => {
     +"CONCAT(usuarios.PRIMER_NOMBRE,' ',usuarios.SEGUNDO_NOMBRE,' ',usuarios.PRIMER_APELLIDO,' ',usuarios.SEGUNDO_APELLIDO) AS NOMBRE, "
     +"usuarios.SEXO AS SEXO, date_format(usuarios.fecha_nacimiento,'%Y-%m-%d') as FECHA_NACIMIENTO,	TIMESTAMPDIFF(YEAR,usuarios.FECHA_NACIMIENTO,CURDATE()) AS EDAD, "
     +"usuarios.telefono AS TELEFONO,cups.nombre_cups AS ESTUDIO,contratos.nombre AS ENTIDAD, especialistas.nombre AS ESPECIALISTA, "
-    +"especialistas.especialidad AS ESPECIALIDAD,date_format(NOW(),'%d') as DIA,date_format(NOW(),'%m') as MES,date_format(NOW(),'%Y') as AÑO FROM detalle_orden	INNER JOIN ordenes ON (detalle_orden.id_orden=ordenes.id) "
+    +"especialistas.especialidad AS ESPECIALIDAD,date_format(NOW(),'%d') as DIA,date_format(NOW(),'%m') as MES,date_format(NOW(),'%Y') as AÑO,usuarios.direccion AS DIRECCION  FROM detalle_orden	INNER JOIN ordenes ON (detalle_orden.id_orden=ordenes.id) "
     +"INNER JOIN usuarios ON (ordenes.id_usuario=usuarios.id) INNER JOIN cups ON (detalle_orden.codigo_cups=cups.codigo_cups) "
     +"INNER JOIN contratos ON (ordenes.id_contrato=contratos.id) INNER JOIN especialistas ON (ordenes.id_empleado=especialistas.id_especialista) "
     +" WHERE detalle_orden.id_orden='"+ orden +"'", (error, result) => {
