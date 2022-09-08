@@ -217,10 +217,10 @@ module.exports.RegistroClinico = (req, res) => {
             id_Orden: req.body.idOrden,
             MotReaPro: req.body.MotReaPro,
             HorUltAli: req.body.HorUltAli,
-            CalidadPreparacion: req.body.CalidadPreparacion,
+            Calificacion_preparacion: req.body.CalidadPreparacion,
             estado: req.body.estado
         }; 
-    /*let query="INSERT INTO consentimiento_informado SET ?";
+    let query="INSERT INTO registro_clinico SET ?";
     pool.query(query,data, function(error, result) {
         if (error) {
             throw error;     
@@ -228,6 +228,6 @@ module.exports.RegistroClinico = (req, res) => {
         }else{
             res.status(200).json(result);                    
         }
-    });    */
+    });    
     console.log(data);
 };
