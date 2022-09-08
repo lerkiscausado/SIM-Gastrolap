@@ -211,3 +211,23 @@ module.exports.Consentimiento = (req, res) => {
     });    
     console.log(data);
 };
+module.exports.RegistroClinico = (req, res) => {
+    var data={                        
+            id: req.body.id, 
+            id_Orden: req.body.idOrden,
+            MotReaPro: req.body.MotReaPro,
+            HorUltAli: req.body.HorUltAli,
+            CalidadPreparacion: req.body.CalidadPreparacion,
+            estado: req.body.estado
+        }; 
+    /*let query="INSERT INTO consentimiento_informado SET ?";
+    pool.query(query,data, function(error, result) {
+        if (error) {
+            throw error;     
+            //res.send(result).json(result);            
+        }else{
+            res.status(200).json(result);                    
+        }
+    });    */
+    console.log(data);
+};
