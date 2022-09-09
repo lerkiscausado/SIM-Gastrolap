@@ -218,6 +218,19 @@ module.exports.RegistroClinico = (req, res) => {
             MotReaPro: req.body.MotReaPro,
             HorUltAli: req.body.HorUltAli,
             Calificacion_Preparacion: req.body.Calificacion_Preparacion,
+            vih: req.body.vih,
+            asma:req.body.asma,
+            diabetes: req.body.diabetes, 
+            cardiopatia: req.body.cardiopatia,
+            protesis_valvular: req.body.protesis_valvular,
+            protesis_articular: req.body.protesis_articular,
+            injerto_vascular: req.body.injerto_vascular,
+            insuficiencia_renal: req.body.insuficiencia_renal,
+            hipertension_arterial: req.body.hipertension_arterial,
+            ninguna: req.body.ninguna,
+            apOtros: req.body.apOtros,
+            cirugias_previas: req.body.cirugias_previas,
+            apCual: req.body.apCual,
             estado: req.body.estado
         }; 
     let query="INSERT INTO registro_clinico SET ?";
