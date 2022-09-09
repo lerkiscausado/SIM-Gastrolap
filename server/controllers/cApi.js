@@ -217,7 +217,7 @@ module.exports.RegistroClinico = (req, res) => {
             id_Orden: req.body.idOrden,
             MotReaPro: req.body.MotReaPro,
             HorUltAli: req.body.HorUltAli,
-            Calificacion_Preparacion: "MALA",
+            Calificacion_Preparacion: req.body.Calificacion_Preparacion,
             estado: req.body.estado
         }; 
     let query="INSERT INTO registro_clinico SET ?";
