@@ -231,6 +231,10 @@ module.exports.RegistroClinico = (req, res) => {
             apOtros: req.body.apOtros,
             cirugias_previas: req.body.cirugias_previas,
             apCual: req.body.apCual,
+            apnea: req.body.apnea,
+            dismorfia_facial: req.body.dismorfia_facial,
+            aco: req.body.aco,
+            anomalias_cuello: req.body.anomalias_cuello,
             estado: req.body.estado
         }; 
     let query="INSERT INTO registro_clinico SET ?";
