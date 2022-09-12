@@ -235,6 +235,45 @@ module.exports.RegistroClinico = (req, res) => {
             dismorfia_facial: req.body.dismorfia_facial,
             aco: req.body.aco,
             anomalias_cuello: req.body.anomalias_cuello,
+            antecedentes_medicamentos: req.body.antecedentes_medicamentos,
+            //Antecedentes Alergicos
+            aaMedicamentos: req.body.aaMedicamentos,
+            aamCual: req.body.aamCual,
+            aaAnestesicos: req.body.aaAnestesicos,
+            aaaCual: req.body.aaaCual,
+            aaDrogas: req.body.aaDrogas,
+            aadCual: req.body.aadCual,
+            apap: req.body.apap,
+            //ANTECEDENTES ENDOSCOPICOS
+            aeEndoscopia_Previa: req.body.aeEndoscopia_Previa,
+            aeepPorque: req.body.aeepPorque,
+            aeTolerancia: req.body.aeTolerancia,
+            aetPorque: req.body.aetPorque,
+            //EXPLORACION ENDOSCOPICA
+            eeCon_Sedacion: req.body.eeCon_Sedacion,
+            eeGrado_Sedacion: req.body.eeGrado_Sedacion,
+            eeViaEV: req.body.eeViaEV,
+            eeSuero_Terapia: req.body.eeSuero_Terapia,
+            eeGlucosado: req.body.eeGlucosado,
+            eeSalino: req.body.eeSalino,
+            eeOtros: req.body.eeOtros,
+            eeVia_Aerea: req.body.eeVia_Aerea,
+            eeCanula: req.body.eeCanula,
+            eeVentury: req.body.eeVentury,
+            eeMascara_Laringea: req.body.eeMascara_Laringea,
+            eeOtros2: req.body.eeOtros2,
+            //MEDICACION ADMINISTRADA
+            maMidazolam: req.body.maMidazolam,
+            maNBBH: req.body.maNBBH,
+            maTramal: req.body.maTramal,
+            maAntibiotico: req.body.maAntibiotico,
+            maTrimebutina: req.body.maTrimebutina,
+            maAtropina: req.body.maAtropina,
+            maNalaxona: req.body.maNalaxona,
+            maEfortil: req.body.maEfortil,
+            maFlumazenil: req.body.maFlumazenil,
+            //HEMODINAMICA DEL PACIENTE
+            hpObservaciones: req.body.hpObservaciones,
             estado: req.body.estado
         }; 
     let query="INSERT INTO registro_clinico SET ?";
