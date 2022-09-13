@@ -1,4 +1,4 @@
-import React,{ useEffect, useState,  Fragment, useRef} from 'react';
+import React,{  Fragment, useRef} from 'react';
 import logo from "../Assets/logo.jpg";
 import salert from 'sweetalert';
 import axios from 'axios';
@@ -26,8 +26,8 @@ const Login = () => {
                 url: `http://181.204.15.130:5000/api/login?usuario=${usuario}&password=${password}`,
                 responseType: 'json'        
             });     
-            if (res.data.length==0){
-                salert("este man no esta registrado");
+            if (res.data.length===0){
+                salert("Error al Iniciar Sesión","Verifique usuario y contraseña","error");
             }else{
                 //salert("bienvenido a Katastronk "+res.data[0].nombre);            
                 window.location.href = "/home";            
